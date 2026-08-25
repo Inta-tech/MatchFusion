@@ -7,6 +7,10 @@ import { fileURLToPath } from 'url';
 import authRoutes from './routes/auth.js';
 import aiRoutes from './routes/ai.js';
 import postRoutes from './routes/posts.js';
+import matchRoutes from './routes/matches.js';
+
+app.use('/api/matches', matchRoutes);
+
 
 dotenv.config();
 
