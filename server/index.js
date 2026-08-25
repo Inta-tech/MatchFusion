@@ -25,12 +25,8 @@ app.use('/api/auth', authRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/posts', postRoutes);
 
-// Serve Static Frontend Files
-app.use(express.static(path.join(__dirname, 'client/dist')));
-
-// SPA Catch-All Route (Fallback to index.html)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+app.get('/', (req, res) => {
+  res.send('MatchFusion API is running successfully on Render!');
 });
 
 app.listen(PORT, () => {
