@@ -7,6 +7,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/MatchFusion/',
   server: {
     port: 5173,
     strictPort: true, // Prevents Vite from switching ports if 5173 is busy
