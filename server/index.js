@@ -9,9 +9,6 @@ import aiRoutes from './routes/ai.js';
 import postRoutes from './routes/posts.js';
 import matchRoutes from './routes/matches.js';
 
-app.use('/api/matches', matchRoutes);
-
-
 dotenv.config();
 
 const app = express();
@@ -28,6 +25,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/api/matches', matchRoutes);
 
 app.get('/', (req, res) => {
   res.send('MatchFusion API is running successfully on Render!');
